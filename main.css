@@ -33,6 +33,8 @@ header {
 #hero {
     width: 100%;
     height: 250px;
+    background: url("images/hero-mobile.jpg") no-repeat;
+    background-size: cover;
 }
 
 /* Info */
@@ -99,6 +101,104 @@ button {
     border-radius: 46px;
     border: none;
     margin-left: -60px;
+    box-shadow: 0px 7px 15px 0px hsl(0, 80%, 86%);
 }
 
-/* Footer */
+/******************** Media Queries *********************/
+
+/* Desktop and tablet styles */
+
+@media only screen and (min-width: 768px) {
+    
+    body {
+        background: url("images/bg-pattern-desktop.svg") no-repeat, linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    }
+
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section {
+        height: 100%;
+    }
+
+    /* Header */
+
+    header {
+        z-index: -1;
+        background: none;
+        justify-content: flex-start;
+    }
+
+    header .content-wrapper {
+        width: 21%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 65px 0 0 0;
+    }
+
+    #logo {
+        width: 48.5%;
+    }
+
+    /* Hero Image */
+
+    #hero {
+        order: 2;
+        width: 42.36%;
+        height: 800px;
+        background: url("images/hero-desktop.jpg") no-repeat;
+        margin-top: -84px;
+    }
+
+
+    /* Info */
+
+    main .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 42.36%;
+    }
+
+    #info {
+        width: 73.77%;
+        text-align: justify;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 3.75em;
+        line-height: 1.2em;
+    }
+
+    #info p {
+        font-size: 1em;
+        text-align: left;
+    }
+
+
+    /* Form */
+
+    form {
+        width: 73.77%;;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    /* Footer */
+
+    footer {
+        margin-top: -33px;
+    }
+
+    .attribution {
+        width: 57.63%;
+    }
+
+
+  }
